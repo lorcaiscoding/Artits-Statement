@@ -192,12 +192,12 @@ function typeText(txt, x, y, speed, callback) {
 
 function callGPTAPIStream(userInput, callback) {
   let endpoint = "https://api.openai.com/v1/chat/completions"; 
-  let apiKey = "##########";  
+  let apiKey = "MY_SECRET_KEY";  //Sorry for private policy we cannot delpoy API_KEY on github pages
   
   let postData = {
     model: "gpt-3.5-turbo",
     messages: [
-      { role: "system", content: "Transform user input into an International Art English (IAE) artist statement. Elevate common words to their noun forms (e.g., visual to visuality, experience to experiencability). Integrate advanced French-derived suffixes (-ion, -ity, -ality, -ization) and ensure the inclusion of one French word. Weave in metaphors. Emphasize terms like “space” and “reality”. Infuse the statement with adverbial phrases such as “radically questioned” and double adverbial terms like “playfully and subversively invert”. Incorporate phrases such as simultaneously, while also, and always already. Limit to 100 words." },
+      { role: "system", content: "Transform user input into an International Art English (IAE) artist statement. Elevate common words to their noun forms (e.g., visual to visuality, experience to experiencability). Integrate advanced French-derived suffixes (-ion, -ity, -ality, -ization) and ensure the inclusion of only one French word. Weave in metaphors. Emphasize terms like “space” and “reality”. Infuse the statement with adverbial phrases such as “radically questioned” and double adverbial terms like “playfully and subversively invert”. Incorporate phrases such as simultaneously, while also, and always already. Limit to 100 words." },
       { role: "user", content: "Process the user input: " + JSON.stringify(userInput) }
     ]
   };
