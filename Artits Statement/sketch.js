@@ -192,7 +192,7 @@ function typeText(txt, x, y, speed, callback) {
 
 function callGPTAPIStream(userInput, callback) {
   let endpoint = "https://api.openai.com/v1/chat/completions"; 
-  let apiKey = "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";  
+  let apiKey = "##########";  
   
   let postData = {
     model: "gpt-3.5-turbo",
